@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
+            background-color: #fff;
+            display: flex;
+            padding-top: 52px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            max-width: 1217px;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 991px) {
+            .header {
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #000;
+            font-weight: 400;
+            line-height: 157%;
+        }
+
+        @media (max-width: 991px) {
+            .header-content {
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        .logo-nav {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 36px;
+        }
+
+        .nav-link,
+        .brand-name,
+        .convert-now {
+            font-family: Manrope, sans-serif;
+            margin: auto 0;
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+            flex-basis: auto;
+            margin: auto 0;
+        }
+
+        .nav-link {
+            color: #bdc1ca;
+        }
+
+        .selected-font {
+            font-family: Manrope, sans-serif;
+            flex-grow: 1;
+        }
+
+        .welcome-title {
+            color: #000;
+            margin: 172px 0 0 66px;
+            font: 700 54px/141% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .welcome-title {
+                max-width: 100%;
+                margin-top: 40px;
+                font-size: 40px;
+            }
+        }
+
+        .tagline {
+            color: #bdc1ca;
+            margin-top: 27px;
+            font: 700 18px/156% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .tagline {
+                max-width: 100%;
+            }
+        }
+
+        .view-jobs {
+            color: #9095a1;
+            margin-top: 91px;
+            font: 700 18px/156% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .view-jobs {
+                margin-top: 40px;
+            }
+        }
+
+        .decorative-img {
+            aspect-ratio: 1.08;
+            object-fit: auto;
+            object-position: center;
+            width: 359px;
+            z-index: 10;
+            margin-top: 106px;
+            max-width: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .decorative-img {
+                margin-top: 40px;
+            }
+        }
+
+        .note-container {
+            border-radius: 4px;
+            box-shadow: 0px 0px 2px 0px rgba(23, 26, 31, 0.12), 0px 0px 1px 0px rgba(23, 26, 31, 0.07);
+            background-color: #fff;
+            align-self: stretch;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 60px;
+        }
+
+        @media (max-width: 991px) {
+            .note-container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .note-content {
+            display: flex;
+            width: 100%;
+            max-width: 1176px;
+            flex-direction: column;
+            align-items: center;
+            margin: 76px 0 62px;
+        }
+
+        @media (max-width: 991px) {
+            .note-content {
+                max-width: 100%;
+                margin: 40px 0;
+            }
+        }
+
+        .section-title {
+            color: #000;
+            font: 700 36px/139% Lexend, sans-serif;
+        }
+
+        .features-content {
+            align-self: stretch;
+            margin-top: 63px;
+        }
+
+        @media (max-width: 991px) {
+            .features-content {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .features-grid {
+            gap: 20px;
+            display: flex;
+        }
+
+        @media (max-width: 991px) {
+            .features-grid {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+        }
+
+        .feature-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 33%;
+            margin-left: 0px;
+        }
+
+        @media (max-width: 991px) {
+            .feature-column {
+                width: 100%;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            color: #bdc1ca;
+        }
+
+        @media (max-width: 991px) {
+            .feature-item {
+                margin-top: 40px;
+            }
+        }
+
+        .feature-title {
+            font: 700 36px/139% Lexend, sans-serif;
+        }
+
+        .feature-description {
+            text-align: center;
+            margin-top: 40px;
+            font: 400 15px/24px Manrope, sans-serif;
+        }
+
+        .mission-title {
+            color: #bdc1ca;
+            margin-top: 325px;
+            font: 700 45px/142% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .mission-title {
+                margin-top: 40px;
+                font-size: 40px;
+            }
+        }
+
+        .mission-description {
+            color: #bdc1ca;
+            margin-top: 31px;
+            font: 400 15px/160% Manrope, sans-serif;
+        }
+
+        .positions-title {
+            color: #bdc1ca;
+            margin-top: 203px;
+            font: 700 40px/140% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .positions-title {
+                margin-top: 40px;
+            }
+        }
+
+        .positions-filters {
+            display: flex;
+            margin-top: 31px;
+            gap: 14px;
+            font-size: 16px;
+            color: #bdc1ca;
+            font-weight: 400;
+            line-height: 162.5%;
+            padding: 0 1px;
+        }
+
+        @media (max-width: 991px) {
+            .positions-filters {
+                flex-wrap: wrap;
+            }
+        }
+
+        .filter-option {
+            font-family: Manrope, sans-serif;
+            justify-content: center;
+            border-radius: 24px;
+            background-color: #af151c;
+            white-space: nowrap;
+            padding: 16px 22px;
+        }
+
+        @media (max-width: 991px) {
+            .filter-option {
+                white-space: initial;
+                padding: 0 20px;
+            }
+        }
+
+        .role-container {
+            margin-top: 122px;
+            width: 906px;
+            max-width: 100%;
+            padding: 0 1px;
+        }
+
+        @media (max-width: 991px) {
+            .role-container {
+                margin-top: 40px;
+            }
+        }
+
+        .role-grid {
+            gap: 20px;
+            display: flex;
+        }
+
+        @media (max-width: 991px) {
+            .role-grid {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+        }
+
+        .role-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 25%;
+            margin-left: 0px;
+        }
+
+        @media (max-width: 991px) {
+            .role-column {
+                width: 100%;
+            }
+        }
+
+        .role-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #bdc1ca;
+            font-weight: 400;
+        }
+
+        @media (max-width: 991px) {
+            .role-item {
+                margin-top: 40px;
+            }
+        }
+
+        .role-img {
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 44px;
+        }
+
+        .role-title {
+            font-family: Manrope, sans-serif;
+            margin-top: 52px;
+        }
+
+        @media (max-width: 991px) {
+            .role-title {
+                margin-top: 40px;
+            }
+        }
+
+        .role-description {
+            align-self: stretch;
+            margin-top: 15px;
+            font: 15px/160% Manrope, sans-serif;
+        }
+
+        .features-title {
+            color: #bdc1ca;
+            font: 700 43px/140% Lexend, sans-serif;
+        }
+
+        .features-description {
+            color: #bdc1ca;
+            text-align: center;
+            margin-top: 32px;
+            width: 354px;
+            font: 400 15px/24px Manrope, sans-serif;
+        }
+
+        .features-grid {
+            align-self: stretch;
+            margin-top: 51px;
+            padding: 0 2px;
+        }
+
+        @media (max-width: 991px) {
+            .features-grid {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .team-grid {
+            gap: 20px;
+            display: flex;
+        }
+
+        @media (max-width: 991px) {
+            .team-grid {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+        }
+
+        .team-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 25%;
+            margin-left: 0px;
+        }
+
+        @media (max-width: 991px) {
+            .team-column {
+                width: 100%;
+            }
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            color: #bdc1ca;
+            font-weight: 700;
+            text-align: center;
+            line-height: 27px;
+        }
+
+        @media (max-width: 991px) {
+            .team-member {
+                margin-top: 12px;
+            }
+        }
+
+        .team-img {
+            aspect-ratio: 0.93;
+            object-fit: auto;
+            object-position: center;
+            width: 100%;
+        }
+
+        .team-role {
+            font-family: Lexend, sans-serif;
+            align-self: center;
+            margin-top: 19px;
+        }
+
+        .note-button {
+            color: #bdc1ca;
+            margin-top: 134px;
+            font: 700 36px/139% Lexend, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .note-button {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .handwriting-conversion-title {
+            color: #9095a1;
+            margin-top: 46px;
+            font: 400 15px/160% Manrope, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .handwriting-conversion-title {
+                margin-top: 40px;
+            }
+        }
+
+        .handwriting-conversion-section {
+            display: flex;
+            gap: 20px;
+            color: #bdc1ca;
+            font-weight: 400;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 991px) {
+            .handwriting-conversion-section {
+                flex-wrap: wrap;
+                margin-top: 40px;
+            }
+        }
+
+        .handwriting-conversion-group {
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .handwriting-conversion-options {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            white-space: nowrap;
+            line-height: 167%;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 991px) {
+            .handwriting-conversion-options {
+                white-space: initial;
+            }
+        }
+
+        .button-group {
+            display: flex;
+            margin-top: 36px;
+            gap: 20px;
+            font-size: 11px;
+            line-height: 164%;
+        }
+
+        .last-button-group {
+            display: flex;
+            margin-top: 34px;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .sr-only {
+            visibility: hidden;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            clip: rect(0, 0, 0, 0);
+            overflow: hidden;
+        }
+    </style>
+    <div class="main-container">
+        <header class="header">
+            <div class="logo-nav">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ed20ab44cdf778927894385df9f0180577cfdddc266d9526d2d1f5139d15e72?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                    class="logo" alt="Company Logo" />
+                <div class="brand-name">How to</div>
+            </div>
+            <nav class="nav-items">
+                <div class="selected-font">Select font</div>
+                <div class="nav-link">Tuto</div>
+                <div class="nav-link">Our team</div>
+                <div class="nav-link">Get in</div>
+            </nav>
+            <div class="convert-now">Convert Now</div>
+        </header>
+        <section class="welcome-content">
+            <div class="welcome-title">Welcome to HandwrittenNote</div>
+            <div class="tagline"> Transforming text into handwritten notes with a modern twist </div>
+            <div class="view-jobs">View jobs</div>
+            <img loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/926646936a2f82442aea05ee74977b341c9355abb2e880c1099b4b4f079ea0d9?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                class="decorative-img" alt="" />
+        </section>
+        <section class="note-container">
+            <div class="note-content">
+                <div class="section-title">Creative Environment</div>
+                <div class="features-content">
+                    <div class="features-grid">
+                        <div class="feature-column">
+                            <div class="feature-item">
+                                <div class="feature-item-title">Inclusivity and</div>
+                                <div class="feature-description"> Join our discussions and share your thoughts with us.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-column">
+                            <div class="feature-item">
+                                <div class="feature-title">Flexible Work Setup</div>
+                                <div class="feature-description"> Work from anywhere and enjoy more time with loved
+                                    ones.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-column">
+                            <div class="feature-item">
+                                <div class="feature-title">Continuous learning</div>
+                                <div class="feature-description"> Embrace growth mindset and learning opportunities
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-title">Our Mission</div>
+                <div class="mission-description"> Revolutionizing note-taking with modern handwriting styles. </div>
+                <div class="positions-title">Available Positions</div>
+                <div class="positions-filters">
+                    <div class="filter-option">All Roles</div>
+                    <div class="filter-option">Engineering</div>
+                    <div class="filter-option">Design</div>
+                    <div class="filter-option">Foundation</div>
+                    <div class="filter-option">Commercial</div>
+                </div>
+                <div class="role-container">
+                    <div class="role-grid">
+                        <div class="role-column">
+                            <div class="role-item">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/29384a0645fd2e372bb74e9570a88e4eed4e97bde5416995e1ccdc2d20cee8b4?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="role-img" alt="Design roles" />
+                                <div class="role-title">Design roles</div>
+                                <div class="role-description">Crafting visual</div>
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/64e17cb476df148f60bdc7b6437c7cd3f1aeba1d5ac55babf427d043f626bd7b?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="role-img" alt="Financial roles" />
+                                <div class="role-title">Financial roles</div>
+                                <div class="role-description">Analyzing financial</div>
+                            </div>
+                        </div>
+                        <div class="role-column">
+                            <div class="role-item">
+                                <div class="role-title">Platform</div>
+                                <div class="role-description">Leading project</div>
+                                <div class="role-title">Enim aliqu</div>
+                                <div class="role-description">Sales positions</div>
+                                <div class="role-description">Managing client</div>
+                            </div>
+                        </div>
+                        <div class="role-column">
+                            <div class="role-item">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/9491056e4f69b295e39b04034aac87b1346be57bce2cf19f56b335c30f7359b4?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="role-img" alt="Design positions" />
+                                <div class="role-title">Design positions</div>
+                                <div class="role-description">Creating visual concepts</div>
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c4874612e0968c9214379389a52113f32e7806cd0bd3fdc12a5177775d4ef3d?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="role-img" alt="Create stunning" />
+                                <div class="role-title">Create stunning</div>
+                                <div class="role-description">Crafting user-friendly</div>
+                            </div>
+                        </div>
+                        <div class="role-column">
+                            <div class="role-item">
+                                <div class="role-title">Optimizing ad performance</div>
+                                <div class="role-description">Specializing in PPC</div>
+                                <div class="role-title">Customize fonts</div>
+                                <div class="role-description">Notebook designer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feature-container">
+            <div class="feature-content">
+                <div class="features-title">Features</div>
+                <div class="features-description"> HandwrittenNote brings your digital text tolife with realistic
+                    handwritten style on notebook pages. </div>
+                <div class="features-grid">
+                    <div class="team-grid">
+                        <div class="team-column">
+                            <div class="team-member">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2017a7eee7e57c62e3025d9fdf6d11271d5e98cffbe972a513ffa6c3fdd0a0d?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="team-img" alt="Ella Smith" />
+                                <div class="team-role"> Ella Smith <br /> Founder </div>
+                            </div>
+                        </div>
+                        <div class="team-column">
+                            <div class="team-member">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d96fe67621f16ec7452d104607c98a006fd3529b024d24c1465417c5e4eefe4d?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="team-img" alt="Oliver Brown" />
+                                <div class="team-role"> Oliver Brown <br /> Font Specialist </div>
+                            </div>
+                        </div>
+                        <div class="team-column">
+                            <div class="team-member">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5111074dcbbf47efdd6722e2d8abdfa23654ccff6ec65020f67f079171752d8?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="team-img" alt="Nora Clark" />
+                                <div class="team-role"> Nora Clark <br /> Design Lead </div>
+                            </div>
+                        </div>
+                        <div class="team-column">
+                            <div class="team-member">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1dc95ccff53cf298821c6f0b0cbef8c20b433167d7fc5f6b3d4c4bae50b2248?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="team-img" alt="Leo Garcia" />
+                                <div class="team-role"> Leo Garcia <br /> Tech Wizard </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section">
+                    <div class="cta-content">
+                        <div class="cta-title">Start creating handwritten notes now</div>
+                        <div class="cta-subtitle">Type text to convert to handwriting</div>
+                        <form class="handwriting-conversion-section">
+                            <label for="handwritingInput" class="sr-only">Type your text</label>
+                            <textarea class="handwriting-conversion-group" id="handwritingInput"
+                                placeholder="Type text to convert to handwriting"
+                                aria-label="Type your text"></textarea>
+                            <div class="handwriting-conversion-options">
+                                <button type="button" class="handwriting-option">Handwrite</button>
+                                <button type="button" class="handwriting-option">Font</button>
+                                <button type="button" class="handwriting-option">Download</button>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="handwriting-download-option">Personalized</button>
+                                <button type="button" class="handwriting-download-option">Custom Design</button>
+                            </div>
+                        </form>
+                        <div class="inspiration-section">
+                            <div class="inspiration-content">
+                                <div class="inspiration-subtitle">Inspi</div>
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/a581572e0e960f447cc7c2364a13353da0efc3b08f512440031fc6a2bdfe51bf?apiKey=500bd9caa79d4be2be08f920b2e289b6&"
+                                    class="inspiration-img" alt="Inspiration" />
+                                <div class="get-in-touch">Get in</div>
+                            </div>
+                        </div>
+                        <div class="disclaimer-section">
+                            <div class="disclaimer-content">
+                                <div class="privacy">Privacy and</div>
+                                <div class="user">User</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
