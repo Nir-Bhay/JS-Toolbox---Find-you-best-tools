@@ -70,8 +70,10 @@ body {
 
 /* Welcome Section */
 .welcome-content {
+    height: auto;
     text-align: center;
     margin-top: 50px;
+    /* background-color: red; */
 }
 
 .welcome-title {
@@ -89,17 +91,82 @@ body {
 .view-tools {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #28a745;
+    background-color: #28a74600;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+/* CSS */
+.button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    .button-56 {
+        padding: 0 40px;
+    }
 }
 
 .decorative-img {
     width: 100%;
     max-width: 600px;
     margin-top: 40px;
+}
+
+.naping9{
+     
+    width: 90%;
+    /* height:30%; */
+  
 }
 
 /* Available Tools Section */
@@ -132,7 +199,17 @@ body {
     background-color: #f8f9fa;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.281);
+    transition:linear 0.1s;
+    transition: padding 0.3s ease;
+}
+
+.feature-item:hover{
+    padding: 30px 33px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.368);
+}
+.feature-item:hover img:hover{
+   width:80%;
 }
 
 .feature-item-title {
@@ -188,7 +265,15 @@ body {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.245);
+    transition: box-shadow 0.5s ease;
+}
+
+.process-step:hover {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.44);
 }
 
 .process-icon {
@@ -221,4 +306,141 @@ body {
    margin: auto;
     width: 80%;
     height: auto;
+}
+p{
+    font-size: 1rem;
+    width:90%;
+    align-items: center;
+    margin: auto;
+    text-wrap: wrap;
+}
+/* 
+body {
+    font-family: 'Arial', sans-serif;
+
+    margin: 0;
+} */
+
+.footer {
+    background-color: #1e90ff;
+    /* Blue theme */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    /* Adjust logo size */
+    height: auto;
+}
+
+.footer-name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    /* Add padding for a button-like feel */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-link:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    color: #ffffff;
+    /* Keep text color white */
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+    /* Gold color on hover */
+}
+
+.footer-bottom {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Animation for footer */
+.footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        /* Stack links vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+    .footer-link {
+        margin: 10px 0;
+        /* Spacing between links */
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        /* Stack logo and name vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+    .footer-name {
+        font-size: 1.2rem;
+        /* Slightly smaller on mobile */
+    }
+}
+
+.feature-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use inherited color from the feature item */
+}
+
+.feature-link:hover .feature-item {
+    background-color: #f0f0f0; /* Optional: Change background color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
