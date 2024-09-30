@@ -2,20 +2,20 @@
 console.log("Landing page loaded.");
 
 // Add any future JavaScript logic here for tool interactivity
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.animated-slide-up');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const sections = document.querySelectorAll('.animated-slide-up');
 
-    // Slide up animations for sections
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('slide-up-visible');
-            }
-        });
-    });
+//     // Slide up animations for sections
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('slide-up-visible');
+//             }
+//         });
+//     });
 
-    sections.forEach(section => observer.observe(section));
-});
+//     sections.forEach(section => observer.observe(section));
+// });
 
 
 document.addEventListener('DOMContentLoaded', function () {

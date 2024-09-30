@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Image to Text Extractor</h1>
+        </div>
+
+        <div class="drop-zone" id="drop-zone">
+            <p>Drag & Drop an image here or click to select a file</p>
+            <input type="file" id="image-input" accept="image/*" hidden>
+        </div>
+
+        <div class="button-group">
+            <button class="button primary" id="extract-button" disabled>Extract Text</button>
+            <button class="button secondary" id="copy-button" disabled>Copy Text</button>
+            <button class="button secondary" id="download-button" disabled>Download Text</button>
+            <button class="button secondary" id="hide-image-button" style="display:none;">Hide Image</button>
+        </div>
+
+        <div id="loading" class="loading-bar" style="display:none;">
+            <div class="loading-bar-inner"></div>
+        </div>
+
+        <img id="uploaded-image" alt="Uploaded image preview">
+
+        <div id="output-container">
+            <div id="output-text" contenteditable="true"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
