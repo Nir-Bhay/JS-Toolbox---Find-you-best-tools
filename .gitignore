@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+page.html
+page1.html
+page2.html
+page3.html
+notebook-background.jpg
