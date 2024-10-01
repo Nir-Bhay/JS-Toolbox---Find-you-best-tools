@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             colorDark: fgColor,
             colorLight: bgColor,
             correctLevel: QRCode.CorrectLevel.H,
-            version: selectedVersion 
+            version: selectedVersion
         };
 
         // Add logo if uploaded
@@ -148,6 +148,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listeners
     qrType.addEventListener('change', updateDynamicContent);
     generateBtn.addEventListener('click', generateQRCode);
+    // Function to update the color preview
+    function updateColorPreview(input, preview) {
+        preview.style.backgroundColor = input.value; // Update the preview with the selected color
+    }
+
+    // Event listeners for color inputs
+    fgColorInput.addEventListener('input', function () {
+        updateColorPreview(fgColorInput, fgPreview);
+    });
+
+    // Initial call to set the preview for the default color
+    updateColorPreview(fgColorInput, fgPreview);
+
+
+    // Event listeners for color inputs
+    bgColorInput.addEventListener('input', function () {
+        updateColorPreview(bgColorInput, bgPreview);
+    });
+
+    // Initial call to set the preview for the default color
+    updateColorPreview(bgColorInput, bgPreview);
+
 
     updateDynamicContent(); // Initialize default content type
 
@@ -179,3 +201,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('downloadSVG').addEventListener('click', downloadSVG);
 
 });
+
+
