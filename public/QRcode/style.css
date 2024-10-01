@@ -1,0 +1,116 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Customization Section */
+.customization-section {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #eaeaea;
+}
+
+.customization-section h1 {
+    margin-bottom: 20px;
+}
+
+.input-group,
+.color-picker-group {
+    margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.color-picker-group {
+    display: flex;
+    align-items: center;
+}
+
+.color-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* QR Code Section */
+.qr-code-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.qr-code-section h2 {
+    margin-bottom: 20px;
+}
+
+.qr-preview {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.download-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.download-btns button {
+    width: 40%;
+    background-color: #00BFFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .customization-section,
+    .qr-code-section {
+        border-right: none;
+    }
+}

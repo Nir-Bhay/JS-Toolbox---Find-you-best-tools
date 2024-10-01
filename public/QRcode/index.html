@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="customization-section">
+            <h1>Advanced QR Code Generator</h1>
+
+            <!-- QR Type Selection -->
+            <div class="input-group">
+                <label for="qrType">Select QR Code Type:</label>
+                <select id="qrType">
+                    <option value="url">URL</option>
+                    <option value="text">Text</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Number</option>
+                    <option value="sms">SMS</option>
+                </select>
+            </div>
+
+            <!-- Dynamic Content Input -->
+            <div id="dynamic-content" class="input-group"></div>
+
+            <!-- Color Picker -->
+            <div class="color-picker-group">
+                <label for="fgColor">Foreground Color:</label>
+                <input type="color" id="fgColor" value="#000000">
+                <div id="fgPreview" class="color-preview"></div>
+            </div>
+
+            <div class="color-picker-group">
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColor" value="#ffffff">
+                <div id="bgPreview" class="color-preview"></div>
+            </div>
+            <div>
+
+                <!-- Custom Styles for QR -->
+                <div class="input-group">
+                    <label for="qrStyle">Select QR Code Style:</label>
+                    <select id="qrStyle">
+                        <option value="default">Default</option>
+                        <option value="rounded">Rounded</option>
+                        <option value="dots">Dots</option>
+                        <option value="square-eyes">Square Eyes</option>
+                    </select>
+                </div>
+
+                <!-- QR Code Size Selection -->
+                <div class="input-group">
+                    <label for="qrSize">Select QR Code Size:</label>
+                    <select id="qrSize">
+                        <option value="128">128 x 128</option>
+                        <option value="256">256 x 256</option>
+                        <option value="512">512 x 512</option>
+                    </select>
+                </div>
+
+                <!-- QR Code Version Selection -->
+                <div class="input-group">
+                    <label for="qrVersion">Select QR Code Version:</label>
+                    <select id="qrVersion">
+                        <option value="2">Version 2</option>
+                        <option value="3">Version 3</option>
+                        <option value="4">Version 4</option>
+                        <option value="5">Version 5</option>
+                        <option value="6">Version 6</option>
+                        <option value="7">Version 7</option>
+                        <option value="8">Version 8</option>
+                    </select>
+                </div>
+
+                <!-- QR Code Mask Selection -->
+                <div class="input-group">
+                    <label for="qrMask">Select QR Code Mask:</label>
+                    <select id="qrMask">
+                        <option value="mask5" selected>Mask 5 (Default)</option>
+                        <option value="none">None</option>
+                        <option value="mask1">Mask 1</option>
+                        <option value="mask2">Mask 2</option>
+                        <option value="mask3">Mask 3</option>
+                        <option value="mask4">Mask 4</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- Upload Logo -->
+            <div class="input-group">
+                <label for="logoUpload">Upload Logo (optional):</label>
+                <input type="file" id="logoUpload" accept="image/*">
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn">Generate QR Code</button>
+        </div>
+
+        <!-- QR Code Display Section -->
+        <div class="qr-code-section">
+            <h2>QR Code Preview</h2>
+            <div id="qr-preview" class="qr-preview"></div>
+
+            <!-- Download Options -->
+            <div class="download-btns">
+                <button id="downloadPNG">Download PNG</button>
+                <button id="downloadSVG">Download SVG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
