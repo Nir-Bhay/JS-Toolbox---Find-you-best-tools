@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Image/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <title>Exam Hall Seating Arrangement</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<div class="container">
+    <h1>Certificate Generator</h1>
+    <form id="certificateForm">
+        <!-- <div class="form-group">
+            <label for="recipientName">Recipient's Name:</label>
+            <input type="text" id="recipientName" class="form-control" value="John Doe">
+        </div> -->
+        <div class="form-group">
+            <label for="courseTitle">Course Title:</label>
+            <input type="text" id="courseTitle" class="form-control" value="Advanced AI Training">
+        </div>
+        <div class="form-group">
+            <label for="issueDate">Date:</label>
+            <input type="date" id="issueDate" class="form-control" value="2024-12-15">
+        </div>
+        <!-- <div class="form-group">
+            <label for="certificateNumber">Certificate Number:</label>
+            <input type="text" id="certificateNumber" class="form-control" value="12345">
+        </div> -->
+        <div class="form-group">
+            <label for="signatory">Signatory:</label>
+            <input type="text" id="signatory" class="form-control" value="Dr. Jane Smith">
+        </div>
+        <div class="form-group">
+            <label for="template">Choose Template:</label>
+            <select id="template" class="form-control">
+                <option value="modern">Modern</option>
+                <option value="classic">Classic</option>
+                <option value="default">Default</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="numberOfCertificates">Number of Certificates:</label>
+            <input type="number" id="numberOfCertificates" class="form-control" value="1">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="startProcess()">Start Process</button>
+    </form>
+    <div id="certificatePreview" class="pdf-preview"></div>
+</div>
+
+
+
+    <!-- JS Libraries for XLSX and jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
